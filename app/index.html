@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовый Html</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+<div class="container">
+    <p class="video__title">Тестовый поток</p>
+    <p class="video__description">Вывод видео с библиотекой hls.js</p>
+    <div class="video__container">
+        <video id="video" controls></video>
+    </div>
+    <div class="controls-elements">
+        <button onclick="play()">Play ▶</button>
+        <button onclick="pause()">Pause ◼</button>
+        <button onclick="speedUp()">Быстрее ▸▸</button>
+        <button onclick="slowDown()">Медленее ◂◂</button>
+        <button onclick="normalSpeed()">Стандартная скорость ▸</button>
+    </div>
+    <div class="position-tracker">
+        <p class="position-tracker__title">Текущая позиция:</p>
+        <div class="barContainer">
+            <div id="durationBar">
+                <div id="positionBar"><span id="displayStatus">0</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="buffer-tracker">
+        <p class="buffer-tracker__title">Размер буфера:</p>
+        <div class="barContainer">
+            <div id="bufferDurationBar">
+                <div id="bufferPositionBar"><span id="bufferDisplayStatus">0</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/common.js"></script>
+</html>
